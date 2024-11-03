@@ -5,12 +5,13 @@ export default function Login() {
     const naviggate = useNavigate();
     const [username,setUsername]= useState<string>("")
     const [password,setPassword]= useState<string>("")
-    localStorage.setItem("isLogin","true")
+    
 
     const handleLogin = ()=>{
         if(username &&  password && localStorage.getItem("username")=== username &&
          localStorage.getItem("password")=== password
         ) {
+            localStorage.setItem("isLogin","true")
             naviggate('/pages')
         }
         else{

@@ -11,13 +11,11 @@ export default function App() {
     <div className='app'>
       <Routes>
         <Route path='/auth/*' element={<AuthRouter/>}/>
-
         <Route path='/pages/*' element={
-       
+          <LoginGurd>
           <PagesRouter/>
-         
+          </LoginGurd>  
           }/>
-
       </Routes>
     </div>
   )
